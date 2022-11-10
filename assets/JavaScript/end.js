@@ -29,6 +29,7 @@ setTimeout(() => {
     saveScoreBtn.disabled = !username.value;
   })
 }, 3000)
+
 saveHighScore = e => {
   console.log('clicked !');
   e.preventDefault();
