@@ -3,6 +3,8 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
+const game = document.getElementById('game');
+const loader = document.getElementById('loader');
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -56,7 +58,7 @@ getNewQuestion = () => {
   progressText.innerText = `Quesiton ${questionCounter}/${MAX_QUESTION}`;
 
   // UPDATE PROGRESSBAR
-  progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`;
 
   const quesitonIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[quesitonIndex];
@@ -96,5 +98,8 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 }
-
-startGame();
+setTimeout(() => {
+  game.classList.remove('hidden');
+  loader.classList.add('hidden');
+  startGame();
+}, 250)
