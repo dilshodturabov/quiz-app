@@ -102,4 +102,4 @@ setTimeout(() => {
   game.classList.remove('hidden');
   loader.classList.add('hidden');
   startGame();
-}, 250)
+}, 1000)
