@@ -17,7 +17,10 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 setTimeout(() => {
   end.classList.remove('hidden');
   loader.classList.add('hidden');
-  if (recentScore > 10) {
+  if (recentScore > 20) {
+    finalLevel.innerText = INTERMEDIATE;
+  }
+  else if (recentScore > 10) {
     finalLevel.innerText = ELEMENTARY;
   } else if (recentScore > 5) {
     finalLevel.innerText = BEGINNEER;
