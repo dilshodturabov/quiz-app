@@ -73,4 +73,5 @@ body {
 #progressBarFull {
   height: 99%;
   background-color: #56a5eb;
+  transition: 1s;
 }
