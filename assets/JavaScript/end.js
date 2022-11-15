@@ -9,21 +9,24 @@ const loader = document.getElementById("loader");
 
 const BEGINNEER = 'BEGINNER';
 const ELEMENTARY = "ELEMENTARY";
-const PRO_ELEMENTARY = "PRO-ELEMENTARY";
+const ADVANCED = "ADVANCED";
 const INTERMEDIATE = "INTERMEDIATE";
-const PRO_INTERMEDIATE = "PRO-INTERMEDIATE";
+const PRE_INTERMEDIATE = "PRO-INTERMEDIATE";
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 setTimeout(() => {
   end.classList.remove('hidden');
   loader.classList.add('hidden');
-  if (recentScore > 20) {
+  if (recentScore >= 35) {
+    finalLevel.innerText = ADVANCED;
+  } else if (recentScore >= 30) {
     finalLevel.innerText = INTERMEDIATE;
-  }
-  else if (recentScore > 10) {
+  } else if (recentScore >= 23) {
+    finalLevel.innerText = PRE_INTERMEDIATE;
+  } else if (recentScore >= 15) {
     finalLevel.innerText = ELEMENTARY;
-  } else if (recentScore > 5) {
-    finalLevel.innerText = BEGINNEER;
+  } else {
+    finalLevel.innerText = BEGINNEER;;
   }
 
   finalScore.textContent = `Your score is ${mostRecentScore}`;

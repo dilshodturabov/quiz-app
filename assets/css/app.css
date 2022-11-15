@@ -1,5 +1,5 @@
 :root {
-  background-color: #ecf5ff;
+  background-color: #eff0f3;
   font-size: 62.5%;
 }
 
@@ -20,7 +20,7 @@ h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #56a5eb;
+  color: #fc5b0a;
   margin-bottom: 5rem;
 }
 
@@ -76,13 +76,19 @@ nav ul li a {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 80rem;
   margin: 0 auto;
   padding: 2rem;
+  overflow-y: scroll;
+  padding: 4rem 2rem;
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
 }
 
 .container>* {
@@ -117,16 +123,16 @@ nav ul li a {
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #56a5eb;
+  border: 0.1rem solid #ff8e3c;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #56a5eb;
-  background-color: white;
+  color: #ff8e3c;
+  background-color: #eff0f3;
 }
 
 .btn:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(238, 111, 52, 0.5);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
 }
@@ -135,6 +141,39 @@ nav ul li a {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0d0d0d;
+  color: #fc5b0a;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+footer .git {
+  font-size: 2rem;
+}
+
+footer .container {
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  overflow-y: unset;
+}
+
+footer h3 {
+  margin: 0;
+  color: #fc5b0a;
+}
+
+footer h3 a {
+  color: #eff0f3;
 }
 
 /* FORMS */
@@ -152,7 +191,7 @@ input {
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, .5);
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(233, 133, 51, 0.5);
 }
 
 input::placeholder {
@@ -165,9 +204,9 @@ input::placeholder {
 #loader {
   border: 1.6rem solid white;
   border-radius: 50%;
-  border-top: 1.6rem solid #56a5eb;
-  border-right: 1.6rem solid #56a5eb;
-  border-bottom: 1.6rem solid #56a5eb;
+  border-top: 1.6rem solid #ff8e3c;
+  border-right: 1.6rem solid #ff8e3c;
+  border-bottom: 1.6rem solid #ff8e3c;
   width: 12rem;
   height: 12rem;
   animation: spin linear 2s infinite;
@@ -180,5 +219,46 @@ input::placeholder {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.selected-text {
+  color: #0d0d0d;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.in {
+  font-size: 2rem;
+  color: #0c86f8;
+  float: right;
+  text-decoration: none;
+}
+
+@media (max-width:600px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width:300px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  footer .git {
+    font-size: 1.5rem;
+  }
+
+  footer .in {
+    font-size: 1.5rem;
   }
 }
