@@ -155,6 +155,7 @@ footer {
   align-items: center;
 }
 
+
 footer .git {
   font-size: 1.1rem;
 }
@@ -165,6 +166,10 @@ footer .container {
   justify-items: center;
   justify-content: space-between;
   overflow-y: unset;
+}
+
+footer p{
+  text-align: right;
 }
 
 footer h3 {
