@@ -156,7 +156,7 @@ footer {
 }
 
 footer .git {
-  font-size: 2rem;
+  font-size: 1.1rem;
 }
 
 footer .container {
@@ -233,7 +233,7 @@ input::placeholder {
 }
 
 .in {
-  font-size: 2rem;
+  font-size: 1.1rem;
   color: #0c86f8;
   float: right;
   text-decoration: none;
@@ -255,10 +255,10 @@ input::placeholder {
   }
 
   footer .git {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   footer .in {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
