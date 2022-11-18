@@ -360,7 +360,7 @@ let questions = [
     choice2: "a few",
     choice3: "a little",
     choice4: "few",
-    answer: 3,
+    answer: 4,
   },
   {
     question:
@@ -429,8 +429,7 @@ choices.forEach(choice => {
 })
 
 incrementScore = num => {
-  score += num;
-  scoreText.innerText = score;
+  score += num;;
 }
 setTimeout(() => {
   game.classList.remove('hidden');
